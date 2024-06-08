@@ -1,0 +1,127 @@
+:root {
+  --White: rgb(255, 255, 255);
+  --Light-pink: rgb(249, 240, 255);
+  --Grayish-purple: rgb(140, 105, 145);
+  --Dark-purple: rgb(47, 21, 51);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  background-color: var(--Light-pink);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.img-tag {
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 35%;
+}
+
+.all-container {
+  position: absolute;
+  background-color: var(--White);
+  width: 90%;
+  border-radius: 10px;
+  padding: 15px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inner {
+  padding: 5px 10px 0 10px;
+}
+
+header {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.6rem;
+}
+header img {
+  width: 20px;
+}
+
+.continer {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--Light-pink);
+  padding-bottom: 5px;
+}
+
+.five {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0px;
+}
+.same {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 15px;
+  cursor: zoom-in;
+}
+.same p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+.same img {
+  width: 25px;
+}
+
+.content {
+  color: var(--Grayish-purple);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding-bottom: 0;
+  margin-bottom: 3px;
+}
+.par {
+  display: none;
+}
+
+@media (min-width: 527px) {
+  .img-tag {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 35%;
+  }
+  .all-container {
+    width: 480px;
+  }
+  .same p {
+    font-size: 1rem;
+  }
+  .content {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+  .all-container {
+    top: 53%;
+  }
+}
